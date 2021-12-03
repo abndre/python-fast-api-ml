@@ -16,6 +16,7 @@ class ModelName(str, Enum):
     resnet = "resnet"
     lenet = "lenet"
 
+
 teste = []
 
 app = FastAPI()
@@ -53,7 +54,6 @@ async def get_model(model_name: ModelName):
 async def create_item(item: Item):
     teste.append(item)
     return "recebemos chefia"
-    #return item
 
 
 @app.get("/items/")
